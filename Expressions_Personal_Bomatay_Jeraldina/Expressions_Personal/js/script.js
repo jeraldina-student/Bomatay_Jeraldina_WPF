@@ -16,9 +16,7 @@ var weight = prompt("How many pounds do you weigh?");
 var height = prompt("What is your height in inches?");
 var age = prompt("What is your age?");
 
-if (gender !== "male" and gender !== "female") 
-var gender = prompt("Are you male or female?");
-}
+
 
 if ("female" === gender) {
     bmr = 655+ (4.35 * weight) + (4.7 * height) - (4.7 * age);
