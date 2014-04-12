@@ -5,7 +5,7 @@ Assignment: Expressions
  */
  
  
- /* Calculate the tax bracket for year 2013 or 2014 based on your adjusted gross income.
+ /* Calculate the tax bracket for year 2013 based on your adjusted gross income.
 
 2013 Tax Brackets (for taxes due April 15, 2014)
 Tax rate   Single filers	       Married filing jointly   Married filing separately	Head of household
@@ -28,36 +28,35 @@ var exemptions = prompt("Please write your exemptions. If none write 0");
 
 if ("single" === standard) {
 	var standard = 10150;
-    var grossincome = ((standard + dependents + exemptions) - income);
-    if (grossincome > 0 && grossincome < 8925) {
+    var grossincome = (income - (standard + dependents + exemptions));
+    if (grossincome >= 0 || grossincome < 8925) {
         bracket = "10%";
     }
-    if (grossincome > 8926 && grossincome < 36250) { 
+    if (grossincome >= 8926 && grossincome <= 36250) { 
         bracket = "15%";
     }
-    if (grossincome > 36251 && grossincome < 87850) { 
+    if (grossincome >= 36251 && grossincome <= 87850) { 
         bracket = "25%";
     }
-    if (grossincome > 87851 && grossincome < 183250) { 
+    if (grossincome >= 87851 && grossincome <= 183250) { 
         bracket = "28%";
     }
-    if (grossincome > 183251 && grossincome < 398350) { 
+    if (grossincome >= 183251 && grossincome <= 398350) { 
         bracket = "33%";
     }
-    if (grossincome > 398351 && grossincome < 400000) { 
+    if (grossincome >= 398351 && grossincome <= 400000) { 
         bracket = "35%";
     }
-    if (grossincome < 450001) { 
+    if (grossincome <= 450001) { 
         bracket = "39.6%";
     }
-}
 if ("married filing jointly" === standard) {
 	var standard = 20300;
-    var grossincome = ((standard + dependents + exemptions) - income);
+    var grossincome = (income - (standard + dependents + exemptions));
     if (grossincome > 0 && grossincome < 17850) {
         bracket = "10%";
     }
-    if (grossincome > 17851 && grossincome < 72500) { 
+    if (grossincome >= 17851 && grossincome <= 72500) { 
         bracket = "15%";
     }
     if (grossincome > 72501 && grossincome < 146400) { 
@@ -75,10 +74,9 @@ if ("married filing jointly" === standard) {
     if (grossincome < 400001); { 
         bracket = "39.6%";
     }
-}
 if ("married filing separately" === standard) {
 	var standard = 8925;
-    var grossincome = ((standard + dependents + exemptions) - income);
+    var grossincome = (income - (standard + dependents + exemptions));
     if (grossincome > 0 && grossincome < 8925) {
         bracket = "10%";
     }
@@ -100,10 +98,9 @@ if ("married filing separately" === standard) {
     if (grossincome < 225001) { 
         bracket = "39.6%";
     }
-}
 if ("head of household" === gender); {
     var standard = 12750;
-    var grossincome = ((standard + dependents + exemptions) - income);
+    var grossincome = (income - (standard + dependents + exemptions));
     if (grossincome > 0 && grossincome < 12750) {
         bracket = "10%";
     }
@@ -126,4 +123,7 @@ if ("head of household" === gender); {
         bracket = "39.6%";
     }
 }
-alert ("Your tax bracket for " + year + "is " + bracket + " . Your adjusted gross income is " + grossincome + " .");
+}
+}
+}
+alert ("Your tax bracket for " + year + " is " + bracket + " . Your adjusted gross income is " + grossincome);
