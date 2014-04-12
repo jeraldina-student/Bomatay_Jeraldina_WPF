@@ -22,7 +22,7 @@ Tax rate   Single filers	       Married filing jointly   Married filing separate
 var bracket;
 var year = "2013";
 var income = prompt("What is your income for " + year + "?");
-var standard = prompt("What is your standard deduction? Single, married filling jointly, married filling separately or head of household");
+var standard = prompt("What is your standard deduction? Single, married filing jointly, married filing separately or head of household");
 var dependents = prompt("Do you have any dependents? If none write 0");
 var exemptions = prompt("Please write your exemptions. If none write 0");
 
