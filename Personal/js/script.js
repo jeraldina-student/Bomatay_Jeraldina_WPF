@@ -6,7 +6,6 @@
    * cost of gas
    * miles for commute
    * miles for going to church
-   * miles for going to the gym
 
 how many miles per gallon does your car consume?
 mpg
