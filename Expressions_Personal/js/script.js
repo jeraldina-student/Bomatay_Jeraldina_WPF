@@ -28,17 +28,18 @@ Enter number of miles to weekly activity?
 miscActivity
  */
 
-var mpg = prompt("What is the mpg rate for your car?");
-var gasPrice = prompt("What is the current price for gas per gallon");
-var workMiles = prompt("How many miles do you commute to work on a weekly basis?");
-var parking = prompt("What is the weekly cost of parking?");
-var miscActivity = prompt("Do you have a weekly activity? Please enter the number of miles to said weekly activity. Ex: Church, gym etc..");
-var totalMiles = workMiles + miscActivity;
-console.log("You commute "+totalMiles+" miles and spend $"+parking+" on parking.");
+var mileage = Array();
 
+mileage['mpg'] = prompt("What is the mpg rate for your car?");
+mileage['gasPrice'] = prompt("What is the current price for gas per gallon");
+mileage['workMiles'] = prompt("How many miles do you commute to work on a weekly basis?");
+mileage['parking'] = prompt("What is the weekly cost of parking?");
+mileage['miscActivity'] = prompt("Do you have a weekly activity? Please enter the number of miles to said weekly activity. Ex: Church, gym etc..");
 
-var commutePrice = (totalMiles/mpg) * gasPrice + (parking);
+var totalMiles = mileage['workMiles'] + mileage['miscActivity'];
+console.log("You commute "+totalMiles+" miles and spend $"+mileage['parking']+" on parking.");
 
+var commutePrice = (totalMiles/mileage['mpg']) * mileage['gasPrice'] + (mileage['parking']);
 alert("Your total commute spending is "+commutePrice+" on a weekly basis.");
 console.log("You are spending "+commutePrice+" commuting on a weekly basis.");
 
