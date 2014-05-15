@@ -2,7 +2,8 @@
 
 - determine gas mileage consumption
 - Find:
-   * car mph    * cost of gas
+   * car mpg   
+   * cost of gas
    * miles for commute
    * miles for going to church
    * miles for going to the gym
