@@ -1,3 +1,7 @@
+/* Jeraldina Bomatay
+May 15 2014
+Assignment: Expressions */
+
 /* Personal - how much gas do you consume on a weekly basis.
 
 - determine gas mileage consumption
