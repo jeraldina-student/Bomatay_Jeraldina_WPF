@@ -39,7 +39,7 @@ mileage['miscActivity'] = prompt("Do you have a weekly activity? Please enter th
 var totalMiles = mileage['workMiles'] + mileage['miscActivity'];
 console.log("You commute "+totalMiles+" miles and spend $"+mileage['parking']+" on parking.");
 
-var commutePrice = (totalMiles/mileage['mpg']) * mileage['gasPrice'] + (mileage['parking']);
+var commutePrice = Number(totalMiles/mileage['mpg']) * mileage['gasPrice'] + (mileage['parking']);
 alert("Your total commute spending is "+commutePrice+" on a weekly basis.");
 console.log("You are spending "+commutePrice+" commuting on a weekly basis.");
 
